@@ -1,9 +1,11 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+//@Repository -> SpringConfig.class 에서 스프링 bean을 직접 생성해줬기 때문에. 생략 가능.
 public class MemoryMemberRepository implements MemberRepository
 {
     public static Map<Long, Member> store = new HashMap<>();
