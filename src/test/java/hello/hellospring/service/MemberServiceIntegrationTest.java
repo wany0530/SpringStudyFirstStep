@@ -13,7 +13,7 @@ import org.springframework.test.annotation.Commit;
 import org.springframework.transaction.annotation.Transactional;
 
 @SpringBootTest
-//@Transactional
+@Transactional
 class MemberServiceIntegrationTest
 {
     @Autowired MemberService memberService;
@@ -24,7 +24,7 @@ class MemberServiceIntegrationTest
     {
         // given
         Member member = new Member();
-        member.setName("hello1235");
+        member.setName("hello1235123");
         //when
         Long saveId = memberService.join(member);
         //then
