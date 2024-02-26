@@ -9,6 +9,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Commit;
 import org.springframework.transaction.annotation.Transactional;
 
 @SpringBootTest
@@ -23,11 +24,9 @@ class MemberServiceIntegrationTest
     {
         // given
         Member member = new Member();
-        member.setName("hello");
-
+        member.setName("hello1235");
         //when
         Long saveId = memberService.join(member);
-
         //then
         Member findMember = memberService.findOne(saveId).get();
         Assertions.assertThat(member.getName()).isEqualTo(findMember.getName());

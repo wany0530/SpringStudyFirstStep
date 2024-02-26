@@ -30,7 +30,7 @@ public class MemoryMemberRepositoryTest
         member.setName("spring");
         repository.save(member);
 
-        Member result = repository.findbyId(member.getId()).get();
+        Member result = repository.findById(member.getId()).get();
 //        Assertions.assertEquals(member, result);
         org.assertj.core.api.Assertions.assertThat(member).isEqualTo(result);
     }
